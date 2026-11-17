@@ -7,11 +7,17 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "prisma generate && astro build",
+    "postinstall": "prisma generate",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^11.0.22",
+    "@prisma/client": "6.19.3",
     "astro": "^7.4.12"
+  },
+  "devDependencies": {
+    "prisma": "6.19.3"
   }
 }
